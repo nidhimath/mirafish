@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import pdf from 'pdf-parse/lib/pdf-parse.js';
+import { extractText } from 'unpdf';
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -27,6 +27,11 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 // ─────────────────────────────────────────────────────────────────────────────
 // Text chunking
 // ─────────────────────────────────────────────────────────────────────────────
+
+function sanitizeText(text) {
+  // Remove null bytes and invalid Unicode escape sequences
+  return text.replace(/\0/g, '').replace(/\\u[0-9a-fA-F]{0,3}(?![0-9a-fA-F])/g, '');
+}
 
 function chunkText(text, chunkSize = CHUNK_SIZE, overlap = CHUNK_OVERLAP) {
   const words = text.split(/\s+/).filter(Boolean);
@@ -127,11 +132,11 @@ async function main() {
     }
 
     // 2. Extract text
-    const buffer = Buffer.from(await fileData.arrayBuffer());
+    const uint8 = new Uint8Array(await fileData.arrayBuffer());
     let text;
     try {
-      const parsed = await pdf(buffer);
-      text = parsed.text;
+      const result = await extractText(uint8);
+      text = sanitizeText(result.text.join('\n'));
     } catch (e) {
       console.error(`  ✗ PDF parse failed: ${e.message}`);
       continue;
@@ -182,7 +187,7 @@ async function main() {
       paper_id: paper.id,
       chunk_index: i,
       content,
-      embedding: JSON.stringify(embeddings[i]),
+      embedding: embeddings[i],
     }));
 
     // Insert in batches of 50 to avoid payload limits
