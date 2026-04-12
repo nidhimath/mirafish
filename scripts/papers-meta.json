@@ -1,7 +1,430 @@
 [
   {
-    "filename": "Dai_2025_Small_Steps_No_More.pdf",
-    "title": "Small Steps No More",
-    "authors": ["Bo Dai"]
+    "filename": "6310_KITTEN_A_Knowledge_Integr.pdf",
+    "title": "KITTEN: A Knowledge-Integrated Evaluation of Image Generation on Visual Entities",
+    "authors": [
+      "Hsin-Ping Huang",
+      "Xinyi Wang",
+      "Yonatan Bitton",
+      "Hagai Taitelbaum",
+      "Gaurav Singh Tomar",
+      "Ming-Wei Chang",
+      "Xuhui Jia",
+      "Kelvin C. K. Chan",
+      "Hexiang Hu",
+      "Yu-Chuan Su",
+      "Ming-Hsuan Yang"
+    ]
+  },
+  {
+    "filename": "95_See_it_to_Place_it_Evolving.pdf",
+    "title": "See it to Place it: Evolving Macro Placements with Vision-Language Models",
+    "authors": [
+      "Ikechukwu Uchendu",
+      "Swati Goel",
+      "Karly Hou",
+      "Ebrahim M. Songhori",
+      "Kuang-Huei Lee",
+      "J. Jiang",
+      "V. Reddi",
+      "Vincent Zhuang"
+    ]
+  },
+  {
+    "filename": "2501.03200v1.pdf",
+    "title": "The FACTS Grounding Leaderboard: Benchmarking LLMs' Ability to Ground Responses to Long-Form Input",
+    "authors": [
+      "Alon Jacovi",
+      "Andrew Wang",
+      "Chris Alberti",
+      "Connie Tao",
+      "Jon Lipovetz",
+      "Kate Olszewska",
+      "Lukas Haas",
+      "Michelle Liu",
+      "Nate Keating",
+      "Adam E. Bloniarz",
+      "Carl Saroufim",
+      "Corey Fry",
+      "Doron Kukliansky",
+      "Singh Tomar",
+      "James Swirhun",
+      "Jinwei Xing",
+      "Lily Wang",
+      "Madhu Gurumurthy",
+      "Michael Aaron",
+      "Moran Ambar",
+      "Rachana Fellinger",
+      "Rui Wang",
+      "Zizhao Zhang",
+      "S. Goldshtein",
+      "D. Das"
+    ]
+  },
+  {
+    "filename": "5560_Exploring_exploration_wit.pdf",
+    "title": "Exploring exploration with foundation agents in interactive environments",
+    "authors": [
+      "Danny P. Sawyer",
+      "Nan Rosemary Ke",
+      "Hubert Soyer",
+      "Martin Engelcke",
+      "John Reid",
+      "David P Reichert",
+      "Drew A. Hudson",
+      "Alexander Lerchner",
+      "Danilo Jimenez",
+      "T. Lillicrap",
+      "Michael Mozer",
+      "Jane X Wang"
+    ]
+  },
+  {
+    "filename": "2512.10675v2.pdf",
+    "title": "Evaluating Gemini Robotics Policies in a Veo World Simulator",
+    "authors": [
+      "Krzysztof Choromanski", 
+      "Coline Devin",
+      "Yilun Du",
+      "Debidatta Dwibedi",
+      "Ruiqi Gao",
+      "Abhishek Jindal",
+      "Thomas Kipf",
+      "Sean Kirmani",
+      "Isabel Leal",
+      "Fangchen Liu",
+      "Anirudha Majumdar",
+      "Andrew Marmon",
+      "Carolina Parada",
+      "Yulia Rubanova",
+      "Dhruv Shah",
+      "Vikas Sindhwani",
+      "Jie Tan",
+      "Fei Xia",
+      "Ted Xiao",
+      "Sherry Yang",
+      "Wenhao Yu",
+      "Allan Zhou"
+    ]
+  },
+  {
+    "filename": "2505.18773v3.pdf",
+    "title": "Exploring the limits of strong membership inference attacks on large language models",
+    "authors": [
+      "Jamie Hayes",
+      "Ilia Shumailov",
+      "Christopher A. Choquette-Choo",
+      "Matthew Jagielski",
+      "George Kaissis",
+      "Katherine Lee",
+      "Milad Nasr",
+      "Sahra Ghalebikesabi",
+      "Niloofar Mireshghallah",
+      "Meenatchi Sundaram",
+      "Muthu Annamalai",
+      "Igor Shilov",
+      "Matthieu Meeus",
+      "Y. Montjoye",
+      "Franziska Boenisch",
+      "Adam Dziedzic",
+      "A. F. Cooper"
+    ]
+  },
+  {
+    "filename": "2502.07141v1.pdf",
+    "title": "Small steps no more: Global convergence of stochastic gradient bandits for arbitrary learning rates",
+    "authors": [
+      "Jincheng Mei",
+      "Bo Dai",
+      "Alekh Agarwal",
+      "Sharan Vaswani",
+      "Anant Raj",
+      "Csaba Szepesvári",
+      "Dale Schuurmans"
+    ]
+  },
+  {
+    "filename": "3891_Privacy_Awareness_for_Inf.pdf",
+    "title": "Privacy Awareness for Information-Sharing Assistants: A Case-study on Form-filling with Contextual Integrity",
+    "authors": [
+      "Sahra Ghalebikesabi",
+      "Eugene Bagdasaryan",
+      "Ren Yi",
+      "Itay Yona",
+      "Ilia Shumailov",
+      "Aneesh Pappu",
+      "Chongyang Shi",
+      "Laura Weidinger",
+      "Robert Stanforth",
+      "Leonard Berrada",
+      "Pushmeet Kohli",
+      "Po-Sen Huang",
+      "Borja Balle"
+    ]
+  },
+  {
+    "filename": "2506.13131v1.pdf",
+    "title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery",
+    "authors": [
+      "Alexander Novikov",
+      "Ngân Vu",
+      "Marvin Eisenberger",
+      "Emilien Dupont",
+      "Po-Sen Huang",
+      "Adam Zsolt Wagner",
+      "Sergey Shirobokov",
+      "Borislav M. Kozlovskii",
+      "Francisco J. R. Ruiz",
+      "Abbas Mehrabian",
+      "M. Pawan Kumar",
+      "Abigail See",
+      "Swarat Chaudhuri",
+      "George Holland",
+      "Alex Davies",
+      "Sebastian Nowozin",
+      "Pushmeet Kohli",
+      "Matej Balog"
+    ]
+  },
+  {
+    "filename": "11075_RB_Modulation_Training_F.pdf",
+    "title": "RB-Modulation: Training-Free Stylization using Reference-Based Modulation",
+    "authors": [
+      "Litu Rout",
+      "Yujia Chen",
+      "Nataniel Ruiz",
+      "Abhishek Kumar",
+      "Constantine Caramanis",
+      "Sanjay Shakkottai",
+      "Wen-Sheng Chu"
+    ]
+  },
+  {
+    "filename": "2405.04260v2.pdf",
+    "title": "Verified Neural Compressed Sensing",
+    "authors": [
+      "Rudy Bunel",
+      "Krishnamurthy Dvijotham",
+      "M. Pawan Kumar",
+      "Robert Stanforth"
+    ]
+  },
+  {
+    "filename": "2407.16895v1.pdf",
+    "title": "(Unfair) Norms in Fairness Research: A Meta-Analysis",
+    "authors": [
+      "A. Stevie Bergman",
+      "Kevin McKee",
+      "Nenad Tomasev",
+      "Vinodkumar Prabhakaran",
+      "Rida Qadri",
+      "Nahema Marchal",
+      "William Isaac"
+    ]
+  },
+  {
+    "filename": "2307.08874v2.pdf",
+    "title": "Latent Space Representations of Neural Algorithmic Reasoners",
+    "authors": [
+      "Petar Velickovic",
+      "Razvan Pascanu"
+    ]
+  },
+  {
+    "filename": "322_energy_based_predictive_repres.pdf",
+    "title": "Energy-based Predictive Representations for Partially Observed Reinforcement Learning",
+    "authors": [
+      "Tianjun Zhang",
+      "Tongzheng Ren",
+      "Dale Schuurmans",
+      "Bo Dai"
+    ]
+  },
+  {
+    "filename": "2210.06433v3.pdf",
+    "title": "Self-supervised video pretraining yields robust and more human-aligned visual representations",
+    "authors": [
+      "Nikhil Parthasarathy",
+      "S. M. Ali Eslami",
+      "João Carreira",
+      "Olivier J. Hénaff"
+    ]
+  },
+  {
+    "filename": "1901.10964v1.pdf",
+    "title": "Transfer in Reinforcement Learning with Successor Features and Generalised Policy Improvement",
+    "authors": [
+      "André Barreto",
+      "Diana Borsa",
+      "John Quan",
+      "Tom Schaul",
+      "David Silver",
+      "Matteo Hessel",
+      "Daniel Mankowitz",
+      "Augustin Žídek",
+      "Rémi Munos"
+    ]
+  },
+  {
+    "filename": "harutyunyan16qlambda.pdf",
+    "title": "Q(λ) with Oﬀ-Policy Corrections",
+    "authors": [
+      "Marc G. Bellemare",
+      "Tom Stepleton",
+      "Rémi Munos"
+    ]
+  },
+  {
+    "filename": "2305.14499v2.pdf",
+    "title": "NAIL : Lexical Retrieval Indices with Efﬁcient Non-Autoregressive Decoders",
+    "authors": [
+      "Livio Baldini Soares",
+      "Daniel Gillick",
+      "Jeremy R. Cole",
+      "Tom Kwiatkowski"
+    ]
+  },
+  {
+    "filename": "2408.01505v1.pdf",
+    "title": "MoDE: Effective Multi-task Parameter Efﬁcient Fine-Tuning with a Mixture of Dyadic Experts",
+    "authors": [
+      "Lin Ning",
+      "Harsh Lara",
+      "Meiqi Guo",
+      "Abhinav Rastogi"
+    ]
+  },
+  {
+    "filename": "80_Understanding_subgroup_perf.pdf",
+    "title": "Understanding subgroup performance differences of fair predictors using causal models",
+    "authors": [
+      "Stephen R. Pfohl",
+      "Natalie Harris",
+      "David Madras",
+      "Katherine Heller",
+      "Sanmi Koyejo",
+      "Alexander D'Amour"
+    ]
+  },
+  {
+    "filename": "Heteroscedastic_Variational.pdf",
+    "title": "Heteroscedastic Variational Last Layers",
+    "authors": [
+      "James Harrison",
+      "Jasper Snoek"
+    ]
+  },
+  {
+    "filename": "23963_REINFORCE_Converges_to_O.pdf",
+    "title": "REINFORCE Converges to Optimal Policies with Any Learning Rate",
+    "authors": [
+      "Bo Dai",
+      "D. Schuurmans",
+      "Csaba Szepesvári",
+      "Jincheng Mei"
+    ]
+  },
+  {
+    "filename": "2411.13598v2.pdf",
+    "title": "Preserving Expert-Level Privacy in Oﬄine Reinforcement Learning",
+    "authors": [
+      "Navodita Sharma",
+      "Abhradeep Thakurta",
+      "Alekh Agarwal",
+      "Borja Balle",
+      "Christoph Dann",
+      "Aravindan Raghuveer"
+    ]
+  },
+  {
+    "filename": "65_Reward_Model_Underspecifica.pdf",
+    "title": "Reward Model Underspeciﬁcation in Language Model Alignment",
+    "authors": [
+      "Jacob Eisenstein",
+      "Jonathan Berant",
+      "Chirag Nagpal",
+      "Alekh Agarwal",
+      "Ahmad Beirami",
+      "Alexander Nicholas D'Amour",
+      "Krishnamurthy Dvijotham",
+      "Katherine A Heller",
+      "Stephen Robert Pfohl",
+      "Deepak Ramachandran"
+    ]
+  },
+  {
+    "filename": "95_Comparing_Human_and_LLM_Rat.pdf",
+    "title": "Comparing Human and LLM Ratings of Music-Recommendation Quality with User Context",
+    "authors": [
+      "Sherol Chen",
+      "Sally Goldman",
+      "Ndaba Ndebele",
+      "Andrew K. Lampinen",
+      "M. C. Mozer",
+      "Jie Ren"
+    ]
+  },
+  {
+    "filename": "26276_The_World_Is_Bigger_A_Co.pdf",
+    "title": "The World Is Bigger: A Computationally-Embedded Perspective on the Big World Hypothesis",
+    "authors": [
+      "Dale Schuurmans"
+    ]
+  },
+  {
+    "filename": "2603.09957v2.pdf",
+    "title": "Think Before You Lie: How Reasoning Improves Honesty",
+    "authors": [
+      "Ann Yuan",
+      "Asma Ghandeharioun",
+      "Carter Blum",
+      "Alicia Machado",
+      "Jessica Hoffmann",
+      "Daphne Ippolito",
+      "Martin Wattenberg",
+      "Lucas Dixon",
+      "Katja Filippova"
+    ]
+  },
+  {
+    "filename": "22_Inverted_Attention_Transfor.pdf",
+    "title": "Inverted-Attention Transformers can Learn Object Representations: Insights from Slot Attention",
+    "authors": [
+      "Klaus Greff",
+      "Gamaleldin F. Elsayed",
+      "Michael Mozer",
+      "Thomas Kipf",
+      "Sjoerd van Steenkiste"
+    ]
+  },
+  {
+    "filename": "2401.08572v3.pdf",
+    "title": "The Illusion of Artificial Inclusion",
+    "authors": [
+      "A. Stevie Bergman",
+      "Mark Díaz",
+      "Seliem El-Sayed",
+      "Shakir Mohamed",
+      "Kevin McKee"
+    ]
+  },
+  {
+    "filename": "WACI-5.pdf",
+    "title": "BRAINSTORM: Supercharging Innovation with AI-Driven Ideation",
+    "authors": [
+      "Deniz Altinbüken",
+      "Martin Maas",
+      "Phitchaya Mangpo Phothilimthana"
+    ]
+  },
+  {
+    "filename": "96_Stochastic_linear_dynamics_.pdf",
+    "title": "Stochastic linear dynamics in parameters to deal with Neural Networks plasticity loss",
+    "authors": [
+      "Alexandre Galashov",
+      "Michalis Titsias",
+      "Razvan Pascanu",
+      "Yee Whye Teh"
+    ]
   }
 ]
