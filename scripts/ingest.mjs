@@ -182,6 +182,24 @@ async function main() {
 
     console.log(`  Inserted paper: ${paper.id}`);
 
+    // 5b. Insert author-paper mappings
+    if (meta.authors && meta.authors.length > 0) {
+      const authorRows = meta.authors.map((name) => ({
+        author_name: name,
+        paper_id: paper.id,
+      }));
+
+      const { error: authorErr } = await supabase
+        .from('author_papers')
+        .upsert(authorRows, { onConflict: 'author_name,paper_id' });
+
+      if (authorErr) {
+        console.error(`  ✗ Author-paper mapping failed: ${authorErr.message}`);
+      } else {
+        console.log(`  ✓ Mapped ${authorRows.length} author(s) to paper`);
+      }
+    }
+
     // 6. Insert chunks + embeddings
     const chunkRows = chunks.map((content, i) => ({
       paper_id: paper.id,
