@@ -18,8 +18,8 @@ export async function POST(request) {
 
   // 2. Call the match function
   const { data, error } = await supabase.rpc('match_paper_chunks', {
-    query_embedding: JSON.stringify(embedding),
-    match_threshold: 0.5,
+    query_embedding: embedding,
+    match_threshold: 0.3,
     match_count: 8,
     filter_authors: authors || null,
   });
