@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'ScholarMind',
-  description: 'Multi-Agent AI Researcher Debate Simulator',
+  title: 'JuryMind',
+  description: 'Mock Jury Simulator for Trial Attorneys',
 };
 
 export default function RootLayout({ children }) {

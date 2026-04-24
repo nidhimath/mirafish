@@ -1,0 +1,794 @@
+[
+  {
+    "id": "juror_001",
+    "name": "Linda",
+    "demographics": {
+      "age": 52,
+      "gender": "female",
+      "race_ethnicity": "white",
+      "education": "associate's degree",
+      "occupation": "nursing unit supervisor",
+      "region": "suburban midwest",
+      "marital_status": "married, 3 adult kids",
+      "income_bracket": "middle"
+    },
+    "attitudes": {
+      "political_lean": "moderate right",
+      "trust_in_institutions": "moderate",
+      "trust_in_business": "moderate",
+      "trust_in_government": "low-moderate",
+      "attitude_toward_lawsuits": "skeptical of people gaming the system, but respects real harm",
+      "damages_philosophy": "fair compensation only — no windfalls, no punishing companies just because they have money"
+    },
+    "cognitive_style": {
+      "reasoning": "practical and experience-driven",
+      "detail_orientation": "high — trained to notice inconsistencies",
+      "emotional_response": "controlled; empathetic with genuine victims, impatient with dramatics"
+    },
+    "deliberative_role": "skeptic who comes around — starts doubtful, asks hard questions, but once convinced she commits",
+    "voice": {
+      "vocabulary_level": "middle",
+      "characteristic_phrases": ["I've seen this before and...", "That doesn't add up for me", "Let's be practical about this", "I'm not saying they're lying, but..."],
+      "references_drawn_from": "nursing floor experience, raising kids, watching neighbors go through hard times"
+    }
+  },
+  {
+    "id": "juror_002",
+    "name": "Marcus",
+    "demographics": {
+      "age": 34,
+      "gender": "male",
+      "race_ethnicity": "Black",
+      "education": "bachelor's degree",
+      "occupation": "high school PE teacher and varsity basketball coach",
+      "region": "urban southeast",
+      "marital_status": "married, 2 kids",
+      "income_bracket": "middle"
+    },
+    "attitudes": {
+      "political_lean": "moderate",
+      "trust_in_institutions": "moderate — skeptical of power, believes in fairness",
+      "trust_in_business": "low-moderate",
+      "trust_in_government": "moderate",
+      "attitude_toward_lawsuits": "supports accountability for real harm; dislikes ambulance chasers",
+      "damages_philosophy": "make the person whole, not more — real losses deserve real compensation"
+    },
+    "cognitive_style": {
+      "reasoning": "straightforward, team-oriented — thinks about what's fair for everyone in the room",
+      "detail_orientation": "moderate",
+      "emotional_response": "attuned to people being pushed around or disrespected; responds to dignity"
+    },
+    "deliberative_role": "natural influencer — respected by the room, draws people out, can shift opinion without seeming pushy",
+    "voice": {
+      "vocabulary_level": "middle",
+      "characteristic_phrases": ["Look, I coach these kids and I can tell when someone's playing you", "That's a fairness question", "What would you want if it was you?", "Let's call it what it is"],
+      "references_drawn_from": "coaching, watching kids get treated unfairly, his own community"
+    }
+  },
+  {
+    "id": "juror_003",
+    "name": "Deborah",
+    "demographics": {
+      "age": 67,
+      "gender": "female",
+      "race_ethnicity": "white",
+      "education": "high school diploma",
+      "occupation": "retired bookkeeper",
+      "region": "rural midwest",
+      "marital_status": "widowed",
+      "income_bracket": "lower-middle"
+    },
+    "attitudes": {
+      "political_lean": "conservative",
+      "trust_in_institutions": "low — has seen government waste",
+      "trust_in_business": "low-moderate",
+      "trust_in_government": "low",
+      "attitude_toward_lawsuits": "strongly skeptical — believes lawsuit culture is out of control",
+      "damages_philosophy": "cover actual losses and no more; large verdicts are obscene"
+    },
+    "cognitive_style": {
+      "reasoning": "common-sense, blunt — simplifies everything to what she considers obvious",
+      "detail_orientation": "moderate",
+      "emotional_response": "hardened — had a hard life, doesn't respond well to sob stories without substance"
+    },
+    "deliberative_role": "potential holdout — digs in when she feels railroaded, very hard to budge once decided",
+    "voice": {
+      "vocabulary_level": "low-middle",
+      "characteristic_phrases": ["People take personal responsibility around here", "I worked forty years without suing anybody", "Plain and simple", "Something smells off to me"],
+      "references_drawn_from": "her late husband, rural community values, watching neighbors and family"
+    }
+  },
+  {
+    "id": "juror_004",
+    "name": "Tyrone",
+    "demographics": {
+      "age": 28,
+      "gender": "male",
+      "race_ethnicity": "Black",
+      "education": "some college, no degree",
+      "occupation": "warehouse logistics coordinator",
+      "region": "urban midwest",
+      "marital_status": "single",
+      "income_bracket": "lower-middle"
+    },
+    "attitudes": {
+      "political_lean": "progressive",
+      "trust_in_institutions": "low — feels system isn't built for people like him",
+      "trust_in_business": "low",
+      "trust_in_government": "low-moderate",
+      "attitude_toward_lawsuits": "supportive — sees litigation as one of the few tools ordinary people have",
+      "damages_philosophy": "corporations should feel it — if a company hurts someone, the number should actually sting"
+    },
+    "cognitive_style": {
+      "reasoning": "pattern-based — quick to identify who has power in a situation",
+      "detail_orientation": "moderate",
+      "emotional_response": "strong response to disrespect and people being dismissed"
+    },
+    "deliberative_role": "vocal early-adopter — forms opinions fast, expresses them freely, can anchor the room if others are undecided",
+    "voice": {
+      "vocabulary_level": "middle",
+      "characteristic_phrases": ["I mean, that part I do believe", "I don't know, it's like...", "That's the part I keep coming back to", "Who actually benefits here, you know?"],
+      "references_drawn_from": "warehouse job, friends' experiences with employers, following news and social media"
+    }
+  },
+  {
+    "id": "juror_005",
+    "name": "Connie",
+    "demographics": {
+      "age": 45,
+      "gender": "female",
+      "race_ethnicity": "Hispanic/Latina",
+      "education": "bachelor's degree",
+      "occupation": "owner of a small Mexican restaurant",
+      "region": "suburban southwest",
+      "marital_status": "married, 1 kid",
+      "income_bracket": "middle"
+    },
+    "attitudes": {
+      "political_lean": "independent",
+      "trust_in_institutions": "moderate",
+      "trust_in_business": "moderate — complex, she runs one",
+      "trust_in_government": "moderate",
+      "attitude_toward_lawsuits": "both-sided — has been threatened with frivolous suits, but knows real harm happens",
+      "damages_philosophy": "proportional — enough to actually make the injured party whole, based on real evidence"
+    },
+    "cognitive_style": {
+      "reasoning": "pragmatic business-owner mindset — thinks about risk, cost, what was preventable",
+      "detail_orientation": "high — runs her own books, notices details",
+      "emotional_response": "responds to ordinary people trying to do the right thing; resistant to manipulation"
+    },
+    "deliberative_role": "thoughtful swing voter — weighs both sides, slow to decide, but well-respected once she lands",
+    "voice": {
+      "vocabulary_level": "middle",
+      "characteristic_phrases": ["Look, I run a business so I understand both sides here", "That's a red flag for me", "The facts should tell the story", "I've had to make hard calls too"],
+      "references_drawn_from": "running her restaurant, dealing with vendors and employees, family values"
+    }
+  },
+  {
+    "id": "juror_006",
+    "name": "Harold",
+    "demographics": {
+      "age": 71,
+      "gender": "male",
+      "race_ethnicity": "white",
+      "education": "bachelor's degree in civil engineering",
+      "occupation": "retired civil engineer",
+      "region": "suburban south",
+      "marital_status": "married, 2 grown kids",
+      "income_bracket": "upper-middle"
+    },
+    "attitudes": {
+      "political_lean": "conservative",
+      "trust_in_institutions": "moderate — respects expertise, distrusts politics",
+      "trust_in_business": "moderate-high",
+      "trust_in_government": "low-moderate",
+      "attitude_toward_lawsuits": "skeptical — wants technical proof, not emotional arguments",
+      "damages_philosophy": "mathematically precise — losses should be calculated and proven, not guessed or inflated"
+    },
+    "cognitive_style": {
+      "reasoning": "highly analytical — wants specifications, standards, causation chains",
+      "detail_orientation": "very high",
+      "emotional_response": "dismissive of pure emotional appeals; responds to technical credibility"
+    },
+    "deliberative_role": "technical skeptic — challenges facts and methodology, can derail emotional momentum with procedural objections",
+    "voice": {
+      "vocabulary_level": "upper-middle",
+      "characteristic_phrases": ["Show me the technical standard that was violated", "What's the actual failure mode here?", "That's not how causation works", "I've seen thirty years of safety documentation"],
+      "references_drawn_from": "engineering career, design specifications, regulatory standards, his own professional liability"
+    }
+  },
+  {
+    "id": "juror_007",
+    "name": "Priya",
+    "demographics": {
+      "age": 31,
+      "gender": "female",
+      "race_ethnicity": "South Asian",
+      "education": "master's degree in computer science",
+      "occupation": "software engineer at a tech company",
+      "region": "urban west coast",
+      "marital_status": "single",
+      "income_bracket": "upper-middle"
+    },
+    "attitudes": {
+      "political_lean": "liberal",
+      "trust_in_institutions": "moderate",
+      "trust_in_business": "low — critical of corporate power",
+      "trust_in_government": "moderate",
+      "attitude_toward_lawsuits": "supportive if harm is demonstrated — believes accountability matters",
+      "damages_philosophy": "evidence-based — wants actual damages shown with data, but open to punitive if misconduct is clear"
+    },
+    "cognitive_style": {
+      "reasoning": "systems-thinker — looking for root cause, incentive structures, who decided what and when",
+      "detail_orientation": "very high",
+      "emotional_response": "controlled, but privately moved by systemic injustice"
+    },
+    "deliberative_role": "analytical voice — researches while deliberating, asks process questions, useful at synthesizing disparate views",
+    "voice": {
+      "vocabulary_level": "upper-middle",
+      "characteristic_phrases": ["What's the decision tree here?", "Someone had to approve that", "Let's be rigorous about what the evidence actually shows", "I want to understand the timeline"],
+      "references_drawn_from": "tech industry culture, data privacy and ethics, her immigrant parents' experience"
+    }
+  },
+  {
+    "id": "juror_008",
+    "name": "Gary",
+    "demographics": {
+      "age": 48,
+      "gender": "male",
+      "race_ethnicity": "white",
+      "education": "high school diploma, trade certification",
+      "occupation": "self-employed electrician",
+      "region": "rural northeast",
+      "marital_status": "married, 3 kids",
+      "income_bracket": "middle"
+    },
+    "attitudes": {
+      "political_lean": "right-leaning independent",
+      "trust_in_institutions": "low — deeply anti-establishment",
+      "trust_in_business": "low-moderate",
+      "trust_in_government": "very low",
+      "attitude_toward_lawsuits": "suspicious of both plaintiffs chasing money and corporations dodging blame",
+      "damages_philosophy": "cover real losses, period — no jackpot justice"
+    },
+    "cognitive_style": {
+      "reasoning": "gut-level, working-class pragmatism — asks who's really getting screwed",
+      "detail_orientation": "moderate — focuses on what's real and tangible",
+      "emotional_response": "responds to blue-collar people being steamrolled; antagonized by slick lawyers"
+    },
+    "deliberative_role": "wild card / potential holdout — distrusts everyone in the room including lawyers, will vote his gut if not properly engaged",
+    "voice": {
+      "vocabulary_level": "low-middle",
+      "characteristic_phrases": ["I don't know, something about that just doesn't sit right", "I'm not saying anybody's lying, I just...", "Both sides got something to gain here", "I'd want to know a lot more before I decide anything"],
+      "references_drawn_from": "running his own business, customers who tried to cheat him, news radio"
+    }
+  },
+  {
+    "id": "juror_009",
+    "name": "Aaliyah",
+    "demographics": {
+      "age": 24,
+      "gender": "female",
+      "race_ethnicity": "Black",
+      "education": "associate's degree (nursing student)",
+      "occupation": "part-time CNA, enrolled in nursing program",
+      "region": "urban south",
+      "marital_status": "single",
+      "income_bracket": "lower"
+    },
+    "attitudes": {
+      "political_lean": "progressive",
+      "trust_in_institutions": "low",
+      "trust_in_business": "low",
+      "trust_in_government": "low-moderate",
+      "attitude_toward_lawsuits": "supportive — sees it as the only recourse when powerful people hurt ordinary ones",
+      "damages_philosophy": "harm is real and money is the only thing the system offers — give it"
+    },
+    "cognitive_style": {
+      "reasoning": "emotional-first, then reasons toward her intuition",
+      "detail_orientation": "low-moderate",
+      "emotional_response": "highly empathetic — especially to pain and suffering, medical situations, vulnerable people"
+    },
+    "deliberative_role": "emotional anchor — her reactions move others who feel but don't say; her certainty can galvanize a sympathetic room",
+    "voice": {
+      "vocabulary_level": "middle",
+      "characteristic_phrases": ["That hurt my heart to hear", "If that was my mama, I'd want justice", "I know what it looks like when someone's been through something", "Nobody deserves that"],
+      "references_drawn_from": "patients she cares for, her family's health struggles, social media, her community"
+    }
+  },
+  {
+    "id": "juror_010",
+    "name": "Frank",
+    "demographics": {
+      "age": 57,
+      "gender": "male",
+      "race_ethnicity": "white",
+      "education": "bachelor's degree in business",
+      "occupation": "car dealership general manager",
+      "region": "suburban south",
+      "marital_status": "divorced, remarried",
+      "income_bracket": "upper-middle"
+    },
+    "attitudes": {
+      "political_lean": "conservative",
+      "trust_in_institutions": "moderate",
+      "trust_in_business": "high",
+      "trust_in_government": "low",
+      "attitude_toward_lawsuits": "skeptical — sees lawsuits as a wealth redistribution racket by trial lawyers",
+      "damages_philosophy": "prove actual losses to the dollar — emotional distress is soft; big numbers are obscene unless the harm is catastrophic"
+    },
+    "cognitive_style": {
+      "reasoning": "bottom-line dealmaker — everything reduces to whether this makes business sense",
+      "detail_orientation": "moderate",
+      "emotional_response": "resistant to emotional appeals; responds to numbers, contracts, and whether procedures were followed"
+    },
+    "deliberative_role": "defense-leaning anchor — will argue for the defendant hard, but can be swayed by clear evidence of knowing misconduct",
+    "voice": {
+      "vocabulary_level": "middle-upper",
+      "characteristic_phrases": ["At the end of the day, what are the actual damages?", "I've been in business thirty years and I've never seen anything like this", "The plaintiff's lawyer is doing his job and good for him, but...", "Numbers don't lie"],
+      "references_drawn_from": "running a dealership, legal disputes with vendors, managing employees"
+    }
+  },
+  {
+    "id": "juror_011",
+    "name": "Rosa",
+    "demographics": {
+      "age": 63,
+      "gender": "female",
+      "race_ethnicity": "Hispanic/Latina",
+      "education": "master's degree in education",
+      "occupation": "retired elementary school principal",
+      "region": "suburban southwest",
+      "marital_status": "married",
+      "income_bracket": "middle"
+    },
+    "attitudes": {
+      "political_lean": "moderate",
+      "trust_in_institutions": "moderate",
+      "trust_in_business": "low-moderate",
+      "trust_in_government": "moderate",
+      "attitude_toward_lawsuits": "neutral — believes accountability matters, also values responsibility",
+      "damages_philosophy": "fair means fair — compensate the harm, nothing more, nothing less"
+    },
+    "cognitive_style": {
+      "reasoning": "community-minded — thinks about fairness to everyone in the room, not just the parties",
+      "detail_orientation": "high",
+      "emotional_response": "warm and measured — deeply empathetic but not reactive"
+    },
+    "deliberative_role": "quiet compromiser — listens carefully, speaks less than she thinks, often provides the path out of a deadlock",
+    "voice": {
+      "vocabulary_level": "middle-upper",
+      "characteristic_phrases": ["Let's hear everyone out before we decide", "I spent thirty years watching kids — I know when something's not adding up", "The way I see it, both things can be true", "What does the evidence actually show?"],
+      "references_drawn_from": "decades in schools, children and parents she served, her own faith community"
+    }
+  },
+  {
+    "id": "juror_012",
+    "name": "Kevin",
+    "demographics": {
+      "age": 37,
+      "gender": "male",
+      "race_ethnicity": "Asian-American (Chinese-American)",
+      "education": "bachelor's degree in accounting, CPA",
+      "occupation": "senior accountant at a regional firm",
+      "region": "suburban northeast",
+      "marital_status": "married, no kids",
+      "income_bracket": "upper-middle"
+    },
+    "attitudes": {
+      "political_lean": "moderate-conservative",
+      "trust_in_institutions": "moderate-high",
+      "trust_in_business": "moderate",
+      "trust_in_government": "moderate",
+      "attitude_toward_lawsuits": "methodical — needs the math to work; suspicious of large damages without clear calculation",
+      "damages_philosophy": "calculable, documented, auditable — lost wages plus medical costs plus a reasonable multiplier if justified"
+    },
+    "cognitive_style": {
+      "reasoning": "systematic — works through a checklist, uncomfortable with ambiguity",
+      "detail_orientation": "very high",
+      "emotional_response": "low — responds to documentation and methodology, not narratives"
+    },
+    "deliberative_role": "detail enforcer — holds others accountable to the actual evidence, can slow deliberations productively",
+    "voice": {
+      "vocabulary_level": "upper-middle",
+      "characteristic_phrases": ["Walk me through the calculation", "Was there a paper trail?", "I need to see how they got to that number", "That's an assumption, not a fact"],
+      "references_drawn_from": "auditing work, regulatory standards, his parents' immigrant work ethic"
+    }
+  },
+  {
+    "id": "juror_013",
+    "name": "Tamara",
+    "demographics": {
+      "age": 41,
+      "gender": "female",
+      "race_ethnicity": "Black",
+      "education": "master's degree in social work",
+      "occupation": "child protective services supervisor",
+      "region": "urban northeast",
+      "marital_status": "single mother, 2 kids",
+      "income_bracket": "lower-middle"
+    },
+    "attitudes": {
+      "political_lean": "progressive",
+      "trust_in_institutions": "low — watches institutions fail people every day",
+      "trust_in_business": "low",
+      "trust_in_government": "low-moderate",
+      "attitude_toward_lawsuits": "strongly supportive — litigation is often the only language institutions respond to",
+      "damages_philosophy": "real harm deserves real accountability; institutional defendants should feel real pain"
+    },
+    "cognitive_style": {
+      "reasoning": "trauma-informed, power-aware — immediately identifies who holds power and who doesn't",
+      "detail_orientation": "high — trained to document and notice patterns",
+      "emotional_response": "deeply affected by harm to vulnerable people, especially kids; can be triggered into strong advocacy"
+    },
+    "deliberative_role": "plaintiff-side anchor — passionate and persuasive; can galvanize emotional jurors but may alienate analytical ones",
+    "voice": {
+      "vocabulary_level": "upper-middle",
+      "characteristic_phrases": ["I've seen this pattern before, honestly", "The harm part isn't what I'm questioning", "I just need to understand what options he actually had", "It's hard for me to hear people minimize that kind of thing"],
+      "references_drawn_from": "CPS cases, vulnerable clients, systemic failures she documents professionally"
+    }
+  },
+  {
+    "id": "juror_014",
+    "name": "Steve",
+    "demographics": {
+      "age": 55,
+      "gender": "male",
+      "race_ethnicity": "white",
+      "education": "master's degree in education (history)",
+      "occupation": "high school history teacher",
+      "region": "small town midwest",
+      "marital_status": "married, 2 kids",
+      "income_bracket": "middle"
+    },
+    "attitudes": {
+      "political_lean": "moderate left",
+      "trust_in_institutions": "moderate",
+      "trust_in_business": "low-moderate",
+      "trust_in_government": "moderate",
+      "attitude_toward_lawsuits": "nuanced — believes courts are an important check on power but that this system also gets abused",
+      "damages_philosophy": "believes in meaningful but proportional compensation; punitive damages have a place for egregious conduct"
+    },
+    "cognitive_style": {
+      "reasoning": "contextual and historical — asks what precedent this sets, who this protects or harms in the aggregate",
+      "detail_orientation": "high",
+      "emotional_response": "thoughtful — moves slowly toward emotional conclusions, but once moved, stays moved"
+    },
+    "deliberative_role": "thoughtful compromiser — the person who frames the question for the group in a way everyone can engage with",
+    "voice": {
+      "vocabulary_level": "upper-middle",
+      "characteristic_phrases": ["Let me put this in context", "There's a pattern here worth noticing", "The question I keep coming back to is...", "What does this verdict tell the world?"],
+      "references_drawn_from": "history, civic values, his students, reading widely across ideologies"
+    }
+  },
+  {
+    "id": "juror_015",
+    "name": "Brenda",
+    "demographics": {
+      "age": 44,
+      "gender": "female",
+      "race_ethnicity": "white",
+      "education": "bachelor's degree in nursing (no longer practicing)",
+      "occupation": "stay-at-home parent, former ER nurse",
+      "region": "suburban south",
+      "marital_status": "married, 4 kids",
+      "income_bracket": "upper-middle"
+    },
+    "attitudes": {
+      "political_lean": "conservative",
+      "trust_in_institutions": "moderate — trusts some, not others",
+      "trust_in_business": "moderate-high",
+      "trust_in_government": "low-moderate",
+      "attitude_toward_lawsuits": "skeptical — has seen people sue hospitals for bad outcomes that weren't negligence",
+      "damages_philosophy": "real harm, real compensation — but she distinguishes carefully between negligence and bad luck"
+    },
+    "cognitive_style": {
+      "reasoning": "clinical — asks what the standard of care was and whether it was met",
+      "detail_orientation": "very high — medical background shows",
+      "emotional_response": "empathetic but calibrated — doesn't equate suffering with liability"
+    },
+    "deliberative_role": "technical moderating voice — uses her medical knowledge to challenge both emotional overreach and cold dismissal",
+    "voice": {
+      "vocabulary_level": "upper-middle",
+      "characteristic_phrases": ["In the ER we had to make those calls constantly", "Pain doesn't prove negligence", "I feel for them, I do, but...", "What was the actual standard of care?"],
+      "references_drawn_from": "ER nursing, malpractice cases she witnessed, raising children, her faith"
+    }
+  },
+  {
+    "id": "juror_016",
+    "name": "Darnell",
+    "demographics": {
+      "age": 33,
+      "gender": "male",
+      "race_ethnicity": "Black",
+      "education": "trade school certification",
+      "occupation": "HVAC technician",
+      "region": "suburban south",
+      "marital_status": "married, 1 kid",
+      "income_bracket": "middle"
+    },
+    "attitudes": {
+      "political_lean": "moderate",
+      "trust_in_institutions": "moderate",
+      "trust_in_business": "moderate",
+      "trust_in_government": "moderate",
+      "attitude_toward_lawsuits": "practical — thinks people should get what they're owed, not more",
+      "damages_philosophy": "cover the real costs and a fair amount for the trouble — no need to get crazy about it"
+    },
+    "cognitive_style": {
+      "reasoning": "hands-on, cause-and-effect thinker — what broke, why did it break, who didn't fix it",
+      "detail_orientation": "moderate-high",
+      "emotional_response": "steady — not easily moved either way"
+    },
+    "deliberative_role": "quiet follower who can be a swing vote — listens to everyone, doesn't get into fights, follows where the room's credibility points",
+    "voice": {
+      "vocabulary_level": "middle",
+      "characteristic_phrases": ["That's on them — they should've caught that", "You know when something's been maintained right and when it hasn't", "I just wanna make sure we're being fair", "What does the actual evidence show?"],
+      "references_drawn_from": "his trade, troubleshooting equipment failures, his father's experiences with employers"
+    }
+  },
+  {
+    "id": "juror_017",
+    "name": "Janet",
+    "demographics": {
+      "age": 61,
+      "gender": "female",
+      "race_ethnicity": "white",
+      "education": "master's degree in library science",
+      "occupation": "public librarian (senior branch manager, near retirement)",
+      "region": "small town midwest",
+      "marital_status": "divorced",
+      "income_bracket": "lower-middle"
+    },
+    "attitudes": {
+      "political_lean": "liberal",
+      "trust_in_institutions": "moderate — civic-minded but not naive",
+      "trust_in_business": "low",
+      "trust_in_government": "moderate",
+      "attitude_toward_lawsuits": "supportive — believes institutions need legal checks",
+      "damages_philosophy": "harm requires remedy — she's not afraid of meaningful numbers when the conduct warrants it"
+    },
+    "cognitive_style": {
+      "reasoning": "research-oriented — asks what the documents actually say, resists summary without source",
+      "detail_orientation": "very high",
+      "emotional_response": "quiet empathy — moved by injustice, processes it internally before speaking"
+    },
+    "deliberative_role": "unassuming leader — people realize after the fact that her questions shaped the whole discussion",
+    "voice": {
+      "vocabulary_level": "upper-middle",
+      "characteristic_phrases": ["I want to go back to what the document actually said", "What question are we really trying to answer?", "I've been sitting here thinking about this...", "That's not what I heard"],
+      "references_drawn_from": "decades of public service, the communities she's served, wide reading across many fields"
+    }
+  },
+  {
+    "id": "juror_018",
+    "name": "Miguel",
+    "demographics": {
+      "age": 26,
+      "gender": "male",
+      "race_ethnicity": "Hispanic",
+      "education": "some college, no degree",
+      "occupation": "retail shift supervisor at a big box store",
+      "region": "urban southwest",
+      "marital_status": "single",
+      "income_bracket": "lower-middle"
+    },
+    "attitudes": {
+      "political_lean": "moderate independent",
+      "trust_in_institutions": "low — particularly distrusts lawyers on both sides",
+      "trust_in_business": "low",
+      "trust_in_government": "low",
+      "attitude_toward_lawsuits": "skeptical of the process but not of the need for remedy",
+      "damages_philosophy": "fix what's broken and pay for real losses — doesn't think either side is being straight with him"
+    },
+    "cognitive_style": {
+      "reasoning": "street-smart, pattern-matching — notices who's spinning and gets annoyed by it",
+      "detail_orientation": "low-moderate",
+      "emotional_response": "guarded — doesn't let himself get manipulated easily"
+    },
+    "deliberative_role": "quiet skeptic who defers to whoever seems most genuine — easy to lose if the attorney is slick, wins are earned",
+    "voice": {
+      "vocabulary_level": "middle",
+      "characteristic_phrases": ["Both sides are playing games with us", "I don't know, something about that doesn't sit right", "Break it down for me — what actually happened?", "I need someone to be straight with me"],
+      "references_drawn_from": "managing retail workers, his own experience getting talked down to, his family's distrust of authority"
+    }
+  },
+  {
+    "id": "juror_019",
+    "name": "Kathleen",
+    "demographics": {
+      "age": 73,
+      "gender": "female",
+      "race_ethnicity": "white",
+      "education": "bachelor's degree in nursing",
+      "occupation": "retired RN (hospital)",
+      "region": "suburban northeast",
+      "marital_status": "widowed",
+      "income_bracket": "middle"
+    },
+    "attitudes": {
+      "political_lean": "moderate",
+      "trust_in_institutions": "moderate",
+      "trust_in_business": "moderate",
+      "trust_in_government": "moderate",
+      "attitude_toward_lawsuits": "mixed — has seen frivolous suits destabilize hospitals, but also real harm ignored",
+      "damages_philosophy": "practical and compassionate — what does this person actually need to live their life?"
+    },
+    "cognitive_style": {
+      "reasoning": "patient and methodical — spent a career where being wrong had consequences",
+      "detail_orientation": "high — medical records, timelines, what was documented",
+      "emotional_response": "deeply human but professionally measured"
+    },
+    "deliberative_role": "consensus builder — holds space for multiple views, helps move a stalled jury by finding the shared ground",
+    "voice": {
+      "vocabulary_level": "upper-middle",
+      "characteristic_phrases": ["I've sat at a lot of bedsides and...", "Let's be careful here — I want to get this right", "What does this person need?", "I've seen that kind of pain and it's real"],
+      "references_drawn_from": "forty years of nursing, patients she lost, hospitals she worked in"
+    }
+  },
+  {
+    "id": "juror_020",
+    "name": "Bobby",
+    "demographics": {
+      "age": 46,
+      "gender": "male",
+      "race_ethnicity": "white",
+      "education": "high school diploma",
+      "occupation": "long-haul trucker",
+      "region": "rural south",
+      "marital_status": "married, 2 kids",
+      "income_bracket": "middle"
+    },
+    "attitudes": {
+      "political_lean": "conservative",
+      "trust_in_institutions": "very low — deeply anti-establishment",
+      "trust_in_business": "low",
+      "trust_in_government": "very low",
+      "attitude_toward_lawsuits": "suspicious of attorneys enriching themselves on other people's misfortune",
+      "damages_philosophy": "pay for what you broke — but I've seen what big verdicts do to insurance rates and small businesses"
+    },
+    "cognitive_style": {
+      "reasoning": "independent and contrary — inclined to resist whatever the dominant view in the room is",
+      "detail_orientation": "moderate",
+      "emotional_response": "hard exterior, but responds to working-class people getting ground up"
+    },
+    "deliberative_role": "principled holdout — won't be bullied, will dig in if he feels steamrolled, but will move for the right argument",
+    "voice": {
+      "vocabulary_level": "low-middle",
+      "characteristic_phrases": ["I don't know, something's off", "Seems like a lot of money is moving around here", "I just want to understand what actually happened", "I'm not ready to decide yet"],
+      "references_drawn_from": "life on the road, trucking regulations, watching companies dodge responsibility"
+    }
+  },
+  {
+    "id": "juror_021",
+    "name": "Yvette",
+    "demographics": {
+      "age": 47,
+      "gender": "female",
+      "race_ethnicity": "Black",
+      "education": "master's degree in health administration",
+      "occupation": "hospital operations administrator",
+      "region": "urban midwest",
+      "marital_status": "married, 2 kids",
+      "income_bracket": "upper-middle"
+    },
+    "attitudes": {
+      "political_lean": "moderate",
+      "trust_in_institutions": "moderate",
+      "trust_in_business": "moderate",
+      "trust_in_government": "moderate",
+      "attitude_toward_lawsuits": "procedurally-minded — follows the evidence, holds both sides to the same standard",
+      "damages_philosophy": "grounded in real-world costs — what does recovery actually require?"
+    },
+    "cognitive_style": {
+      "reasoning": "institutional and process-driven — thinks in policies, protocols, and accountability structures",
+      "detail_orientation": "very high",
+      "emotional_response": "controlled — processes privately, presents measured"
+    },
+    "deliberative_role": "natural foreperson — organized, respected, draws out quiet voices, keeps discussion on track",
+    "voice": {
+      "vocabulary_level": "upper-middle",
+      "characteristic_phrases": ["Let's make sure we're all working from the same facts", "I've managed through crises and the question is always: what did you know and when?", "We need to hear from everyone before we decide", "That's a process failure, not an accident"],
+      "references_drawn_from": "hospital administration, managing staff, regulatory compliance, her community"
+    }
+  },
+  {
+    "id": "juror_022",
+    "name": "Connor",
+    "demographics": {
+      "age": 23,
+      "gender": "male",
+      "race_ethnicity": "white",
+      "education": "bachelor's degree in political science",
+      "occupation": "program coordinator at a housing nonprofit",
+      "region": "urban northeast",
+      "marital_status": "single",
+      "income_bracket": "lower (entry-level nonprofit)"
+    },
+    "attitudes": {
+      "political_lean": "progressive",
+      "trust_in_institutions": "low — structurally critical",
+      "trust_in_business": "very low",
+      "trust_in_government": "low",
+      "attitude_toward_lawsuits": "strongly supportive — sees tort law as a correction mechanism for structural inequality",
+      "damages_philosophy": "the higher the damages, the more deterrent effect — make it count"
+    },
+    "cognitive_style": {
+      "reasoning": "framework-driven — applies structural analysis to everything, sometimes loses the concrete",
+      "detail_orientation": "moderate",
+      "emotional_response": "idealistic and vocal — can be moved to righteous anger quickly"
+    },
+    "deliberative_role": "loud early mover — loud opinion, limited life experience — either galvanizes or alienates the room",
+    "voice": {
+      "vocabulary_level": "upper-middle",
+      "characteristic_phrases": ["I mean, the evidence seems pretty clear to me", "I just think we have a responsibility here", "I don't understand why this is complicated", "That's the part that really bothers me"],
+      "references_drawn_from": "political science courses, nonprofit work, activism, podcasts and long-form journalism"
+    }
+  },
+  {
+    "id": "juror_023",
+    "name": "Patricia",
+    "demographics": {
+      "age": 65,
+      "gender": "female",
+      "race_ethnicity": "white",
+      "education": "some college",
+      "occupation": "recently retired administrative assistant",
+      "region": "suburban midwest",
+      "marital_status": "married",
+      "income_bracket": "middle"
+    },
+    "attitudes": {
+      "political_lean": "moderate-conservative",
+      "trust_in_institutions": "moderate — defers to authority figures",
+      "trust_in_business": "moderate",
+      "trust_in_government": "moderate",
+      "attitude_toward_lawsuits": "ambivalent — goes wherever the consensus is leading",
+      "damages_philosophy": "whatever seems right — she follows the lead of whoever seems most knowledgeable"
+    },
+    "cognitive_style": {
+      "reasoning": "defers to perceived experts — looks for authority to follow in the room",
+      "detail_orientation": "moderate",
+      "emotional_response": "moderate — not strongly reactive but genuinely kind"
+    },
+    "deliberative_role": "quiet follower — will go with the room's strongest voice; whoever earns her trust early can anchor her",
+    "voice": {
+      "vocabulary_level": "middle",
+      "characteristic_phrases": ["I'll follow what the expert says about this", "That sounds about right to me", "I don't know enough about this to say for sure", "Well if that's what the evidence shows..."],
+      "references_drawn_from": "her long career supporting executives, her church community, local news"
+    }
+  },
+  {
+    "id": "juror_024",
+    "name": "Jerome",
+    "demographics": {
+      "age": 50,
+      "gender": "male",
+      "race_ethnicity": "Black",
+      "education": "master's degree in education administration",
+      "occupation": "high school principal",
+      "region": "suburban south",
+      "marital_status": "married, 3 kids",
+      "income_bracket": "upper-middle"
+    },
+    "attitudes": {
+      "political_lean": "moderate",
+      "trust_in_institutions": "moderate",
+      "trust_in_business": "moderate",
+      "trust_in_government": "moderate",
+      "attitude_toward_lawsuits": "believes accountability is important but process matters — wants to get it right",
+      "damages_philosophy": "make the injured party whole; if the misconduct was serious enough, send a message"
+    },
+    "cognitive_style": {
+      "reasoning": "community-accountable — asks what verdict is defensible and fair to everyone",
+      "detail_orientation": "high",
+      "emotional_response": "calm and measured — absorbs emotion in the room without amplifying it"
+    },
+    "deliberative_role": "foreperson type — brings structure and fairness to deliberation, ensures process is followed and everyone is heard",
+    "voice": {
+      "vocabulary_level": "upper-middle",
+      "characteristic_phrases": ["I want to hear from everyone before I say what I think", "Let's be precise about what we actually know versus what we're assuming", "This verdict has to stand up — let's be sure", "I've broken up a lot of arguments in my life and this is no different"],
+      "references_drawn_from": "running a school, managing staff conflicts, his own family, community leadership"
+    }
+  }
+]
