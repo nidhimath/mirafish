@@ -1,0 +1,50 @@
+[
+  {
+    "id": "juror_holdout",
+    "name": "Deborah",
+    "demographics": { "occupation": "retired bookkeeper", "age": 67, "gender": "female", "region": "rural midwest" },
+    "attitudes": {
+      "attitude_toward_lawsuits": "strongly skeptical — believes lawsuit culture is out of control",
+      "trust_in_institutions": "low",
+      "damages_philosophy": "cover actual losses and no more"
+    },
+    "cognitive_style": {
+      "reasoning": "common-sense, blunt — simplifies everything to what she considers obvious",
+      "emotional_response": "hardened — had a hard life, doesn't respond well to sob stories"
+    },
+    "deliberative_role": "potential holdout — digs in when she feels railroaded, very hard to budge once decided",
+    "voice": { "vocabulary_level": "low-middle", "characteristic_phrases": ["Plain and simple"] }
+  },
+  {
+    "id": "juror_anxious",
+    "name": "Sarah",
+    "demographics": { "occupation": "social worker", "age": 41, "gender": "female", "region": "urban northeast" },
+    "attitudes": {
+      "attitude_toward_lawsuits": "neutral — supports accountability",
+      "trust_in_institutions": "moderate",
+      "damages_philosophy": "make the person whole"
+    },
+    "cognitive_style": {
+      "reasoning": "empathetic, considers consequences",
+      "emotional_response": "anxious, worried about getting it wrong"
+    },
+    "deliberative_role": "comes around — open to persuasion, sensitive to harm and safety arguments",
+    "voice": { "vocabulary_level": "middle", "characteristic_phrases": ["What if we're wrong?"] }
+  },
+  {
+    "id": "juror_influencer",
+    "name": "Marcus",
+    "demographics": { "occupation": "high school coach", "age": 34, "gender": "male", "region": "urban southeast" },
+    "attitudes": {
+      "attitude_toward_lawsuits": "supports accountability for real harm",
+      "trust_in_institutions": "moderate",
+      "damages_philosophy": "real losses deserve real compensation"
+    },
+    "cognitive_style": {
+      "reasoning": "straightforward, fairness-oriented",
+      "emotional_response": "controlled, attuned to fairness"
+    },
+    "deliberative_role": "natural influencer — respected by the room, draws people out",
+    "voice": { "vocabulary_level": "middle", "characteristic_phrases": ["Let's call it what it is"] }
+  }
+]

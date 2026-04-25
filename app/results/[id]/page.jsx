@@ -347,16 +347,203 @@ function ThemesPanel({ caseDoc, reactions, jurors }) {
   );
 }
 
+// ── Judge Verdict Drawer ──────────────────────────────────────────────────────
+
+function JudgeVerdictDrawer({ verdict, turn, juror, onClose }) {
+  const isWarranted = verdict.verdict === 'WARRANTED';
+  const accent = isWarranted
+    ? { bg: 'bg-emerald-50', text: 'text-emerald-700', border: 'border-emerald-200' }
+    : { bg: 'bg-amber-50', text: 'text-amber-700', border: 'border-amber-200' };
+
+  const hf = verdict.human_factors;
+  const deviated = !!hf?.deviated_from_logic;
+  const logicalLabel = verdict.logical_verdict ?? verdict.verdict;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4">
+      <div className="absolute inset-0 bg-black/30" onClick={onClose} />
+      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+        <div className="sticky top-0 bg-white border-b border-slate-100 px-6 py-4 flex items-center justify-between rounded-t-2xl">
+          <div>
+            <h3 className="font-bold text-slate-800 flex items-center gap-2">
+              <span>⚖</span> Judge Evaluation
+            </h3>
+            <p className="text-xs text-slate-400 mt-0.5">
+              {verdict.speaker_name}
+              {juror && ` · ${juror.demographics?.occupation}`} · {turn.opinion_change?.from} → {turn.opinion_change?.to}
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className={`inline-flex items-center gap-1.5 text-sm font-semibold px-3 py-1 rounded-full border ${accent.bg} ${accent.text} ${accent.border}`}>
+              {isWarranted ? 'Warranted' : 'Unwarranted'}
+            </span>
+            <button onClick={onClose} className="text-slate-400 hover:text-slate-600 p-1">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div className="px-6 py-5 space-y-5">
+          {/* Deviation banner */}
+          {deviated && (
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-xs font-bold text-purple-700 uppercase tracking-wide">Human factors flipped this verdict</span>
+                <span className="text-xs font-mono text-purple-600">{logicalLabel} → {verdict.verdict}</span>
+              </div>
+              <p className="text-sm text-purple-900 leading-relaxed">{hf.deviation_explanation}</p>
+              {verdict.regenerated_rationale && (
+                <div className="mt-3 pt-3 border-t border-purple-200">
+                  <p className="text-xs font-semibold text-purple-700 uppercase tracking-wide mb-1">Public-record rationale</p>
+                  <p className="text-sm text-purple-900 italic leading-relaxed">"{verdict.regenerated_rationale}"</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* The juror's quote */}
+          <div className="bg-slate-50 border-l-4 border-slate-300 rounded-r-md px-4 py-3">
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1">What they said</p>
+            <p className="text-sm text-slate-700 italic leading-relaxed">"{turn.text}"</p>
+          </div>
+
+          {/* Logical evaluation narrative */}
+          <div>
+            <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1.5">Logical Evaluation</p>
+            <p className="text-sm text-slate-700 leading-relaxed">{verdict.evaluation}</p>
+          </div>
+
+          {/* Bias flags */}
+          {verdict.bias_flags?.length > 0 && (
+            <div>
+              <p className="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-2">Bias Flags</p>
+              <div className="flex flex-wrap gap-2">
+                {verdict.bias_flags.map((flag) => (
+                  <span key={flag} className="bg-amber-50 border border-amber-200 text-amber-700 text-xs font-mono px-2 py-1 rounded">
+                    {flag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Score + threshold breakdown */}
+          <div className="grid grid-cols-2 gap-3 text-xs">
+            {[
+              ['Reasoning quality', `${verdict.reasoning_quality_score} / 4`],
+              ['Stubbornness input (S)', verdict.stubbornness_input?.toFixed(2)],
+              ['Base threshold (S × 3)', verdict.stubbornness_threshold?.toFixed(2)],
+              ['Randomness seed (R)', verdict.randomness_seed?.toFixed(2)],
+              ['Randomness adj. (R−0.5)×0.6', verdict.randomness_adjustment?.toFixed(2)],
+              ['Adjusted threshold', verdict.adjusted_threshold?.toFixed(2)],
+            ].map(([label, val]) => (
+              <div key={label} className="bg-slate-50 rounded-md px-3 py-2">
+                <p className="text-slate-400 mb-0.5">{label}</p>
+                <p className="text-slate-700 font-semibold font-mono">{val ?? '—'}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Human factors breakdown */}
+          {hf && (
+            <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 space-y-3">
+              <div className="flex items-center justify-between">
+                <p className="text-xs font-bold text-slate-700 uppercase tracking-wide">Human Factors Layer</p>
+                <span className={`text-xs font-mono ${deviated ? 'text-purple-700' : 'text-slate-500'}`}>
+                  P(deviate) = {hf.final_deviation_probability.toFixed(3)} · roll {hf.random_draw.toFixed(3)} → {deviated ? 'DEVIATED' : 'held'}
+                </span>
+              </div>
+
+              {/* Big Five */}
+              {hf.big_five && (
+                <div className="grid grid-cols-5 gap-2 text-xs">
+                  {Object.entries(hf.big_five).map(([k, v]) => (
+                    <div key={k} className="bg-white rounded px-2 py-1.5 border border-slate-100 text-center">
+                      <p className="text-slate-400 uppercase tracking-wide" style={{ fontSize: '0.65rem' }}>{k}</p>
+                      <p className="text-slate-700 font-mono font-semibold">{v.toFixed(2)}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Factors fired */}
+              {hf.factors_applied?.length > 0 ? (
+                <div className="space-y-1.5">
+                  <p className="text-xs font-semibold text-slate-500">Factors that fired:</p>
+                  {hf.factors_applied.map((f, i) => (
+                    <div key={i} className="flex items-start justify-between gap-3 text-xs bg-white rounded px-3 py-2 border border-slate-100">
+                      <div className="flex-1 min-w-0">
+                        <p className="font-mono font-semibold text-slate-700">{f.factor_name}</p>
+                        <p className="text-slate-500 leading-snug mt-0.5">{f.active_because}</p>
+                      </div>
+                      <div className="shrink-0 text-right">
+                        <p className="font-mono text-slate-700">w = {f.weight.toFixed(3)}</p>
+                        <p className="text-slate-400 text-[10px]">{f.direction}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-xs text-slate-500 italic">No human factors fired — pure logic verdict.</p>
+              )}
+            </div>
+          )}
+
+          {/* Recommended action */}
+          <div className={`rounded-lg p-3 border ${accent.bg} ${accent.border}`}>
+            <p className={`text-xs font-semibold uppercase tracking-wide mb-1 ${accent.text}`}>Recommended action</p>
+            <p className={`text-sm font-mono ${accent.text}`}>{verdict.recommended_action}</p>
+          </div>
+
+          {/* Feedback */}
+          {verdict.feedback_to_member && (
+            <div>
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-1.5">Feedback to juror</p>
+              <p className="text-sm text-slate-700 leading-relaxed">{verdict.feedback_to_member}</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── Deliberation Panel ────────────────────────────────────────────────────────
 
 function DeliberationPanel({ caseDoc, reactions, jurors }) {
   const [deliberation, setDeliberation] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [verdicts, setVerdicts] = useState(null); // array of judge verdicts, indexed by turn_index
+  const [judging, setJudging] = useState(false);
+  const [judgeError, setJudgeError] = useState('');
+  const [selectedVerdict, setSelectedVerdict] = useState(null);
+
+  async function runJudge(transcript) {
+    setJudging(true);
+    setJudgeError('');
+    try {
+      const res = await fetch('/api/jurors/judge', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ transcript, jurors, reactions }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+      setVerdicts(data.verdicts);
+    } catch (err) {
+      setJudgeError(err.message);
+    } finally {
+      setJudging(false);
+    }
+  }
 
   async function simulate() {
     setLoading(true);
     setError('');
+    setVerdicts(null);
     try {
       const res = await fetch('/api/jurors/deliberate', {
         method: 'POST',
@@ -366,6 +553,7 @@ function DeliberationPanel({ caseDoc, reactions, jurors }) {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
       setDeliberation(data.deliberation);
+      runJudge(data.deliberation.transcript);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -421,8 +609,24 @@ function DeliberationPanel({ caseDoc, reactions, jurors }) {
   return (
     <div className="bg-white border border-slate-200 rounded-xl shadow-sm mt-6 overflow-hidden">
       <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between">
-        <p className="font-bold text-slate-800 text-base">Jury Room Transcript</p>
-        <button onClick={() => setDeliberation(null)} className="text-xs text-slate-400 hover:text-slate-600 transition-colors">↺ Regenerate</button>
+        <div className="flex items-center gap-3">
+          <p className="font-bold text-slate-800 text-base">Jury Room Transcript</p>
+          {judging && (
+            <span className="inline-flex items-center gap-1.5 text-xs text-slate-500">
+              <svg className="w-3 h-3 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+              </svg>
+              Judge evaluating opinion changes…
+            </span>
+          )}
+          {!judging && verdicts && (
+            <span className="text-xs text-slate-500">
+              Judge: {verdicts.filter((v) => v.verdict === 'WARRANTED').length} warranted · {verdicts.filter((v) => v.verdict === 'UNWARRANTED').length} unwarranted
+              {judgeError && <span className="text-red-500"> · error</span>}
+            </span>
+          )}
+        </div>
+        <button onClick={() => { setDeliberation(null); setVerdicts(null); }} className="text-xs text-slate-400 hover:text-slate-600 transition-colors">↺ Regenerate</button>
       </div>
 
       {/* Summary */}
@@ -439,6 +643,7 @@ function DeliberationPanel({ caseDoc, reactions, jurors }) {
           const currentLean = jurorInitialLean[turn.speaker_id] ?? 'undecided';
           const leanStyle = leanColors[currentLean] ?? leanColors.undecided;
           const hasChange = turn.opinion_change != null;
+          const verdict = hasChange ? verdicts?.find((v) => v.turn_index === i) : null;
 
           if (hasChange && turn.opinion_change) {
             jurorInitialLean[turn.speaker_id] = turn.opinion_change.to;
@@ -462,6 +667,34 @@ function DeliberationPanel({ caseDoc, reactions, jurors }) {
                       {turn.opinion_change.from} → {turn.opinion_change.to}
                     </span>
                   )}
+                  {verdict && !verdict.error && (
+                    <button
+                      onClick={() => setSelectedVerdict({ verdict, turn, juror })}
+                      className={`text-xs font-semibold px-2 py-0.5 rounded-full border transition-colors ${
+                        verdict.verdict === 'WARRANTED'
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100'
+                          : 'bg-amber-50 text-amber-700 border-amber-200 hover:bg-amber-100'
+                      }`}
+                      title="Click for judge evaluation"
+                    >
+                      ⚖ {verdict.verdict === 'WARRANTED' ? 'Warranted' : 'Unwarranted'}
+                      {verdict.bias_flags?.length > 0 && ` · ${verdict.bias_flags.length} flag${verdict.bias_flags.length > 1 ? 's' : ''}`}
+                    </button>
+                  )}
+                  {verdict?.human_factors?.deviated_from_logic && (
+                    <span
+                      className="text-xs font-semibold px-2 py-0.5 rounded-full border bg-purple-50 text-purple-700 border-purple-200"
+                      title={verdict.human_factors.deviation_explanation}
+                    >
+                      ⤺ flipped by human factors
+                    </span>
+                  )}
+                  {hasChange && !verdict && judging && (
+                    <span className="text-xs text-slate-400 italic">judging…</span>
+                  )}
+                  {verdict?.error && (
+                    <span className="text-xs text-red-400 italic" title={verdict.error}>judge error</span>
+                  )}
                 </div>
                 <p className="text-sm text-slate-700 leading-relaxed">{turn.text}</p>
               </div>
@@ -469,6 +702,13 @@ function DeliberationPanel({ caseDoc, reactions, jurors }) {
           );
         })}
       </div>
+
+      {selectedVerdict && (
+        <JudgeVerdictDrawer
+          {...selectedVerdict}
+          onClose={() => setSelectedVerdict(null)}
+        />
+      )}
 
       {/* Final vote */}
       {final_vote && (
