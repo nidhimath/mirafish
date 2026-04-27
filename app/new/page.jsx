@@ -36,7 +36,7 @@ Crestview’s alert system in Section 7 had been flagged in a prior audit as “
 
 Medical experts disagree on whether Henderson’s current condition is solely attributable to the incident or partially due to a pre-existing respiratory condition documented in prior health screenings.
 
-Opening Statement (Defense)
+Opening Statement
 Ladies and gentlemen of the jury,
 
 This case is not about whether Robert Henderson was injured. He was. And everyone in this courtroom can agree that what happened to him is unfortunate.
@@ -55,7 +55,7 @@ This case is not about a company ignoring safety. It is about a complex incident
 
 At the end of this trial, we will ask you to return a verdict based not on sympathy, but on evidence — and that evidence will show that Crestview Chemical acted reasonably.
 
-Trial Strategy (Defense)
+Trial Strategy 
 Core theme: "This was an accident, not negligence."
 
 The defense will focus on three areas of reasonable doubt:
